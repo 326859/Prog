@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int c, x, y, min, max;
+	int arr[10];
+	
+	for (y=0; y<10; y++)
+		arr[y]=0;
+	y=0;
+	
+	while ((c=getchar())!='\n')
+		if (c!=' ')
+			y=y*10+c-'0'; /* ó êîë-âî êîìàíä*/
+		else
+			{
+				x=y; /* x êîë-âî ó÷àñòíèêîâ*/
+				y=0;
+			}
+	
+	c=x;
+	for (min=0; min<x; min+=y)
+		for (max=0; max<y; ++max)
+			if (c>0) 
+			{
+				++arr[max];
+				--c;
+			}
+			
+	min=0;
+	for (max=0; max<y; ++max)
+		for ((arr[max]-1); arr[max]>0; --arr[max])
+			min+=arr[max]-1;
+		
+	max=0;
+	c=x-y;
+	for (c; c>0; --c)
+		max+=c;
+		
+	printf("%d %d", min, max);
+	
+	getch();
+}
