@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int c, i, p, y;
+	int arr[3];
+	
+	for ( i=0; i<3; ++i)
+		arr[i]=0;
+	i=p=0;
+	
+	while ((c=getchar())!='\n')
+		if (c!=' ')
+			arr[i]=arr[i]*10+c-'0';
+		else
+			++i;
+	
+	c=0;
+	while (arr[0]+arr[1]+arr[2]>2 && ((arr[0]!=0 && arr[1]!=0) || (arr[1]!=0 &&arr[2]!=0) || (arr[2]!=0 && arr[0]!=0)))
+	{
+		if (arr[0]==arr[1] && arr[1]==arr[2])
+		{
+			c+=arr[0];
+			arr[0]=arr[1]=arr[2]=0;
+		}
+		else
+		{
+			for (y=1; y<3; ++y)
+				for (i=1; i<3; i++)
+					if (arr[i-1]<arr[i])
+					{
+						p=arr[i];
+						arr[i]=arr[i-1];
+						arr[i-1]=p;
+					}
+			arr[0]-=2;
+			arr[1]--;
+			c++;
+		}
+	}
+	printf("%d", c);
+	getch();
+}
