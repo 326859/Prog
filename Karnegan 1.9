@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<conio.h>
+#define MAXLINE 1000 /* Ìàêñèìàëüíàÿ äëèííà ñòðîêè */
+
+int getline(char line[], int maxline[]);
+void copy(char to[], char from[]);
+
+/* Âûâîä ñàìîé äëèííîé ñòðîêè â ïîòîêå */
+
+main()
+{
+	int len; /* Äëèííà òåêóùåé ñòðîêè */
+	int max; /* Òåêóùàÿ ìàêñèìàëüíàÿ äëèííà */
+	char line[MAXLINE]; /* Òåêóùàÿ ââåäåíàÿ ñòðîêà */
+	char longest[MAXLINE] /* Ñàìàÿ äëèííàÿ ñòðîêà èç ââåäåííûõ*/
+	
+	max=0;
+	while ((len = getline(line, MAXLINE))>0)
+		if (len > max)
+		{
+			max = len;
+			copy(longest, line);
+		}
+	if (max > 0) /* Áûëà íå ïóñòàÿ ñòðîêà*/
+		printf("%s", longest);
+	getch();
+	return 0;
+}
+
+/* getlene: ñ÷èòûâàåò ñòðîêó â s, âîçâðàùàåò åå äëèííó */
+
+int getline(char s[], int lim)
+{
+	int c, i;
+	for (i = 0; i < lim-1 && (c = getchar())!= EOF && c != '\n'; ++i)
+		s[i] = c;
+	if (c == '\n')
+	{
+		s[i] = c;
+		++i;
+	}
+	s[i] = '\0';
+	return i;
+}
+
+/* copy: êîïèðóåò ñòðîêó */
+
+void copy(char to[], char from[])
+{
+	int i;
+	
+	i=0;
+	while ((to[i] = from[i]) !='\0')
+		++i;
+}
+
+
+
+Fail.cpp:18: error: invalid conversion from `int' to `int*'
+Fail.cpp:18: error:   initializing argument 2 of `int getline(char*, int*)'
+Fail.cpp:22: error: `longest' was not declared in this scope
+Fail.cpp:22: warning: unused variable 'longest'
+Fail.cpp:25: error: `longest' was not declared in this scope
+Fail.cpp:25: warning: unused variable 'longest'
+Fail.cpp:55:2: warning: no newline at end of file
+
+Karnegan.exe - 5 error(s), 4 warning(s)
