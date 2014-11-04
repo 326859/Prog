@@ -1,0 +1,187 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int c;
+	
+	c=getchar();
+	
+	if (c=='L')
+	{
+		c=getchar();
+		while ((c=getchar())!='\n')
+		switch (c)
+		{
+		case 'q':
+			printf("w");
+			break;
+		case 'w':
+			printf("e");
+			break;
+		case 'e':
+			printf("r");
+			break;
+		case 'r':
+			printf("t");
+			break;
+		case 't':
+			printf("y");
+			break;
+		case 'y':
+			printf("u");
+			break;
+		case 'u':
+			printf("i");
+			break;
+		case 'i':
+			printf("o");
+			break;
+		case 'o':
+			printf("p");
+			break;
+		case 'a':
+			printf("s");
+			break;
+		case 's':
+			printf("d");
+			break;
+		case 'd':
+			printf("f");
+			break;
+		case 'f':
+			printf("g");
+			break;
+		case 'g':
+			printf("h");
+			break;
+		case 'h':
+			printf("j");
+			break;
+		case 'j':
+			printf("k");
+			break;
+		case 'k':
+			printf("l");
+			break;
+		case 'l':
+			printf(";");
+			break;
+		case 'z':
+			printf("x");
+			break;
+		case 'x':
+			printf("c");
+			break;
+		case 'c':
+			printf("v");
+			break;
+		case 'v':
+			printf("b");
+			break;
+		case 'b':
+			printf("n");
+			break;
+		case 'n':
+			printf("m");
+			break;
+		case 'm':
+			printf(",");
+			break;
+		case ',':
+			printf(".");
+			break;
+		case '.':
+			printf("/");
+			break;
+		}
+	}
+	if (c=='R')
+	{
+		c=getchar();
+		while ((c=getchar())!='\n')
+		switch (c)
+		{
+		case 'p':
+			printf("o");
+			break;
+		case 'o':
+			printf("i");
+			break;
+		case 'i':
+			printf("u");
+			break;
+		case 'u':
+			printf("y");
+			break;
+		case 'y':
+			printf("t");
+			break;
+		case 't':
+			printf("r");
+			break;
+		case 'r':
+			printf("e");
+			break;
+		case 'e':
+			printf("w");
+			break;
+		case 'w':
+			printf("q");
+			break;
+		case ';':
+			printf("l");
+			break;
+		case 'l':
+			printf("k");
+			break;
+		case 'k':
+			printf("j");
+			break;
+		case 'j':
+			printf("h");
+			break;
+		case 'h':
+			printf("g");
+			break;
+		case 'g':
+			printf("f");
+			break;
+		case 'f':
+			printf("d");
+			break;
+		case 'd':
+			printf("s");
+			break;
+		case 's':
+			printf("a");
+			break;
+		case '/':
+			printf(".");
+			break;
+		case '.':
+			printf(",");
+			break;
+		case ',':
+			printf("m");
+			break;
+		case 'n':
+			printf("b");
+			break;
+		case 'b':
+			printf("v");
+			break;
+		case 'v':
+			printf("c");
+			break;
+		case 'c':
+			printf("x");
+			break;
+		case 'x':
+			printf("z");
+			break;
+		}
+	}
+	getch();
+	
+}
