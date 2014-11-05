@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<conio.h>
+
+int str ( int arr[][], int n, int m);
+int stl ( int arr[][], int n, int m);
+
+main()
+{
+	int pole[100][100];
+	int n, m, i, c, q;
+	
+	
+	scanf("%d %d", &n, &m);
+
+	for ( i=0; i<n; i++ )
+	{
+		q=getchar();
+		for ( c=0; c<m; c++)
+			pole[i][c]=getchar();
+	}
+	
+	/*printf("\n");
+	
+	for ( i=0; i<n; i++ )
+	{
+		for ( c=0; c<m; c++)
+			putchar(pole[i][c]);
+		printf("\n");
+	
+	}*/
+	
+	
+	getch();
+}
+
+int str ( int arr[][], int n, int m)
+{
+	int c, i;
+	for (i=0; i<m; i++)
+		if (arr[n][i]=='*')
+			c++;
+	return c;
+}
+
+int stl ( int arr[][], int n, int m)
+{
+	int c, i;
+	for (i=0; i<n; i++)
+		if (arr[i][m]=='*')
+			c++;
+	return c;
+}
+
+
+Compiling...
+Fail.cpp
+Fail.cpp:4: error: declaration of `arr' as multidimensional array must have bounds for all dimensions except the first
+Fail.cpp:5: error: declaration of `arr' as multidimensional array must have bounds for all dimensions except the first
+Fail.cpp:8: warning: ISO C++ forbids declaration of `main' with no type
+Fail.cpp:37: error: declaration of `arr' as multidimensional array must have bounds for all dimensions except the first
+Fail.cpp: In function `int str(int, int)':
+Fail.cpp:40: error: `arr' was not declared in this scope
+Fail.cpp:40: warning: unused variable 'arr'
+Fail.cpp: At global scope:
+Fail.cpp:46: error: declaration of `arr' as multidimensional array must have bounds for all dimensions except the first
+Fail.cpp: In function `int stl(int, int)':
+Fail.cpp:49: error: `arr' was not declared in this scope
+Fail.cpp:49: warning: unused variable 'arr'
+Fail.cpp:52:2: warning: no newline at end of file
+
+Fail.o - 6 error(s), 4 warning(s)
