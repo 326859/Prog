@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+#include <conio.h>
+
+int main(void)
+{
+    cout << "howboy! " << 8 << " Today" << endl << endl;
+
+    cout << "in decimal: " << dec << 15 << endl;
+    cout << "in oct: " << oct << 15 << endl;
+    cout << "in hex: " << hex << 15 << endl;
+    cout << "a floating-point number: " << 3.14159 <<endl;
+    cout << "non-pointing char (escape): " << char(27) << endl << endl;
+
+    cout << "This is far too long to put on a "
+        "single line but it can be brocen up whiz "
+        "no ill effects\nas long there is no "
+        "punctuation separating adjacent character "
+        "arrays.\n\n";
+
+    cout << "dec to oct and hex" << endl;
+    int number;
+    cout << "Enter a decimal number: ";
+    cin >> number;
+    cout << "value in octal = 0" << oct << number
+        << " value in hex = 0x" << hex << number << endl;
+
+    getch();
+    return(0);
+}
+
+01:19:02: Выполняются этапы для проекта 1consol...
+01:19:02: Запускается: «C:\Qt\5.3\mingw482_32\bin\qmake.exe» "C:\Users\Андрей\Desktop\Новая папка\Qt\Проект 1\1consol\1consol.pro" -r -spec win32-g++ "CONFIG+=debug"
+Cannot find file: C:\Users\Андрей\Desktop\Новая папка\Qt\Проект 1\1consol\1consol.pro.
+01:19:02: Процесс «C:\Qt\5.3\mingw482_32\bin\qmake.exe» завершился с кодом 2.
+Ошибка при сборке/установке проекта 1consol (комплект: Desktop Qt 5.3 MinGW 32bit)
+When executing step "qmake"
+01:19:02: Прошло времени: 00:00.
