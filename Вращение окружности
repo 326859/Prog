@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int qrt( int );
+
+int main( void )
+{
+	int r, x, y, x1, y1;
+	float d;
+	
+	scanf("%d %d %d %d %d", &r, &x, &y, &x1, &y1);
+	
+	d=sqrt(qrt(x1-x)+qrt(y1-y))/(r*2);
+	
+	x=d;
+	
+	if( d-x != 0 )
+		x++;
+	
+	printf("%d", x);
+	
+	getch();
+	return 0;
+}
+
+int qrt( int x )
+{
+	return x*x;
+}
