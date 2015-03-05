@@ -1,0 +1,42 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+    int x0;
+    int y0;
+    int x;
+    int y;
+    int z;
+    vector<int> vektor;
+    int p = 0;
+
+    cin >> z >> x0 >> y0;
+
+    for(int i = 0; i < z; i++)
+    {
+        cin >> x >> y;
+        if( (x - x0) != 0)
+        {
+            int otn;
+            otn = (y - y0) / (x - x0);
+            int c;
+            for(c = 0; c < vektor.size(); c++)
+                if(vektor[c] == otn)
+                    break;
+            if(c == vektor.size())
+                vektor.push_back(otn);
+        }
+        else
+           p++;
+    }
+
+    z = vektor.size();
+    if(p != 0)
+    {
+        z++;
+    }
+
+    cout << z;
+}
